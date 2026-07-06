@@ -1,0 +1,21 @@
+name: Neon Database Branching
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+
+jobs:
+  manage_neon_branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create or Delete Neon Branch
+        uses: neondatabase/action-create-branch@v3
+        with:
+          project_id: ${{ secrets.NEON_PROJECT_ID }}
+          api_key: ${{ secrets.NEON_API_KEY }}
+          branch_name: pr-${{ github.event.number }}-${{ github.head_ref }}
+          action: ${{ github.event.action == 'closed' && 'delete' || 'create' }}
