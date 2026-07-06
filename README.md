@@ -20,3 +20,10 @@ This package is designed to be installed as a git dependency in downstream apps 
 - **`lib/center.js`**: Medical facility centers configuration.
 - **`lib/role.js`**: User roles definition (`ADMIN`, `STAFF`, `MOTHER`).
 - **`lib/crypto.js`**: Encryption utility functions for hashing and verification using `bcrypt`.
+
+## CI/CD Database Branching (Neon Tech)
+
+This repository includes a GitHub Action workflow in [neon_workflow.yml](file:///d:/WEBSITE%20DEVELOPMENT/thedivinegarbhsanskar/divine-data-models/.github/workflows/neon_workflow.yml).
+* Whenever a pull request is opened or updated on this repository, it automatically contacts Neon Tech and provisions an isolated development database branch.
+* When the pull request is closed or merged, the development database branch is automatically deleted.
+
