@@ -52,4 +52,5 @@ export { default as userSubscription } from "./lib/userSubscription.js";
 export { default as coupon } from "./lib/coupon.js";
 export { default as adminAuditLog } from "./lib/adminAuditLog.js";
 export { default as crmNote } from "./lib/crmNote.js";
+export { default as staffTask } from "./lib/staffTask.js";
 export { DataModels } from "./lib/data-models-class.js";
